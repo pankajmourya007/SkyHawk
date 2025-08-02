@@ -134,5 +134,3 @@ This project is licensed under the MIT License. See `LICENSE.md` for details.
 ---
 
 > **SkyHawk** is a proof-of-concept tool designed for **educational and red team research purposes only**. It must **not** be used to disrupt legal drone operations.
-```
-
