@@ -1,7 +1,19 @@
 
-# SkyHawk 🛰️ — Drone Detection & Jamming Assistant
+<h1 align="center">SkyHawk 🛰️</h1>
 
-![SkyHawk Circuit](./wiring_diagrams/SkyHawk.png)
+<p align="center"><i>Drone Detection & Jamming Assistant</i></p>
+
+<p align="center">
+  <img src="./wiring_diagrams/Test_result.png" alt="SkyHawk Test Result" width="500"/>
+</p>
+
+---
+
+## 📡 Live Test Output
+
+> Below is an actual test output from the SkyHawk device in action. GPS location data was successfully retrieved and alerts were generated (SIM was not inserted, so messages were shown via serial):
+
+
 
 **SkyHawk** is a lightweight, field-deployable hardware-based cybersecurity tool designed for **drone activity detection and disruption** using GPS spoofing, GSM alerts, and RF communication. It's built around the powerful **ESP32** and integrates key modules like **NEO-6M GPS**, **SIM800L GSM**, and **NRF24L01+PA+LNA**, all powered via a compact USB power bank.
 
@@ -99,10 +111,11 @@ Place all `.ino` and `.h` files in `/src`, open `main.ino` in Arduino IDE, and f
 ## 📸 Images
 
 **Wiring Preview**  
-![SkyHawk Wiring](./wiring_diagrams/SkyHawk.png)
+<p align="center">
+  <img src="./wiring_diagrams/SkyHawk.png" alt="SkyHawk Circuit" width="500"/>
+</p>
 
 ---
-
 ## 🤝 Contributing
 
 You're welcome to contribute:
