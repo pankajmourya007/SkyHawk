@@ -80,7 +80,7 @@ SkyHawk is developed for ethical hacking and red teaming scenarios where drone s
 ## ⚙️ Setup Instructions
 
 ### 1. **Prepare Your Hardware**
-- Follow the wiring diagram provided in `wiring_diagrams/circuit.png`.
+- Follow the wiring diagram provided in `wiring_diagrams/SkyHAwk0.png`.
 - Insert a micro SIM into the SIM800L.
 - Use a 5V USB power bank or regulated 3.7–4.2V Li-ion battery for SIM800L.
 
@@ -115,7 +115,43 @@ Place all `.ino` and `.h` files in `/src`, open `main.ino` in Arduino IDE, and f
   <img src="https://github.com/pankajmourya007/SkyHawk/blob/master/wiring_diagrams/SkyHawk0.png" alt="SkyHawk Circuit" width="500"/>
 </p>
 
+
 ---
+
+## 🔌 Wiring Setup — ESP32 DevKit v1
+
+This table outlines the correct pin connections for each module in the **SkyHawk** project:
+
+| Module         | Pin Name                          | ESP32 Pin         |
+| -------------- | --------------------------------- | ----------------- |
+| **NEO-6M GPS** | VCC                               | 3.3V              |
+|                | GND                               | GND               |
+|                | TX                                | D16               |
+|                | RX                                | D17               |
+| **SIM800L**    | VCC *(via AMS1117 or Diode Drop)* | External 3.7–4.2V |
+|                | GND                               | GND               |
+|                | TX                                | D26               |
+|                | RX                                | D27               |
+| **NRF24L01**   | VCC *(+10µF Cap)*                 | 3.3V              |
+|                | GND                               | GND               |
+|                | CE                                | D4                |
+|                | CSN                               | D5                |
+|                | SCK                               | D18               |
+|                | MOSI                              | D23               |
+|                | MISO                              | D19               |
+
+---
+
+### ⚙️ Power & Signal Notes
+
+* ✅ **SIM800L** must be powered via a **regulated 3.7–4.2V supply** (e.g., Li-ion cell). Don’t power it directly from ESP32.
+* ✅ **NRF24L01** needs a **10µF capacitor** across VCC and GND to prevent brownouts.
+* ✅ **GPS Module** uses **Serial2** on ESP32 (`D16 = RX`, `D17 = TX`).
+
+---
+
+
+
 ## 🤝 Contributing
 
 You're welcome to contribute:
