@@ -112,7 +112,7 @@ Place all `.ino` and `.h` files in `/src`, open `main.ino` in Arduino IDE, and f
 
 **Wiring Preview**  
 <p align="center">
-  <img src="./wiring_diagrams/SkyHawk.png" alt="SkyHawk Circuit" width="500"/>
+  <img src="https://github.com/pankajmourya007/SkyHawk/blob/master/wiring_diagrams/SkyHawk0.png" alt="SkyHawk Circuit" width="500"/>
 </p>
 
 ---
